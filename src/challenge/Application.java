@@ -4,6 +4,7 @@ public class Application {
 
 	public static void main(String[] args) {
 		
+		//Instanciando objetos com os construtores completos
 		Combustivel combMoto = new Combustivel();
 		combMoto.setGasolina(true);
 		Moto moto = new Moto("Honda Titan", combMoto, true);

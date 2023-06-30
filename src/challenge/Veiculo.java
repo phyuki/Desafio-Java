@@ -31,7 +31,8 @@ public class Veiculo {
 		this.combustivel = combustivel;
 	}
 	
-	//Como cada veículo possui seus componentes, a verificação deles pode ser declarada apenas na superclasse
+	/*Como cada veículo possui seus componentes, 
+	 a verificação deles pode ser declarada apenas na superclasse para evitar redundância */
 	public String temComponente(boolean comp) {
 		return comp ? "Sim" : "Não";
 	}
