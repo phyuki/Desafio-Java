@@ -7,10 +7,10 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		//Valor do pedágio para automóveis convencionais
+		//Tarifa base para o valor do pedágio para automóveis convencionais
 		double valorPedagio = 4.70;
 		DecimalFormat df = new DecimalFormat("0.00");
-		System.out.println("Pedágio - Tarifa Convencional: R$ "+df.format(valorPedagio)+'\n');
+		System.out.println("---------- Pedágio ---------- \nTarifa Convencional: R$ "+df.format(valorPedagio)+'\n');
 		
 		//Instanciando objetos com os construtores completos
 		Combustivel combMoto = new Combustivel();
