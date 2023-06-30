@@ -15,6 +15,12 @@ public class Charrete extends Veiculo{
 		this.toldo = toldo;
 	}
 
+	//Charretes, por serem transportes comuns apenas no meio urbano, não entram no rigor do pedágio
+	@Override
+	public double pedagio(double tarifaBase) {
+		return 0.0;
+	}
+	
 	public boolean isToldo() {
 		return toldo;
 	}

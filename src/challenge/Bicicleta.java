@@ -17,6 +17,12 @@ public class Bicicleta extends Veiculo{
 		this.bagageiro = bagageiro;
 	}
 	
+	//Bicicletas não entram no rigor do pedágio
+	@Override
+	public double pedagio(double tarifaBase) {
+		return 0.0;
+	}
+	
 	public boolean isMotorEletrico() {
 		return motorEletrico;
 	}
@@ -29,7 +35,7 @@ public class Bicicleta extends Veiculo{
 	public void setBagageiro(boolean bagageiro) {
 		this.bagageiro = bagageiro;
 	}
-
+	
 	@Override
 	public String toString() {
 		String eletrico = this.temComponente(this.motorEletrico);

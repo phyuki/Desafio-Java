@@ -15,6 +15,12 @@ public class Moto extends Veiculo{
 		this.partidaEletrica = partidaEletrica;
 	}
 
+	//Motocicletas tem uma tarifa mais barata do que outros automóveis
+	@Override
+	public double pedagio(double tarifaBase) {
+		return 0.55*tarifaBase;
+	}
+	
 	public boolean isPartidaEletrica() {
 		return partidaEletrica;
 	}

@@ -37,6 +37,12 @@ public class Veiculo {
 		return comp ? "Sim" : "Não";
 	}
 	
+	/*Num cenário de pedágio, podemos separar valores específicos 
+	para veículos cotidianos e veiculos de carga */
+	public double pedagio(double tarifaBase) {
+		return this.carga ? 1.5*tarifaBase : tarifaBase;
+	}
+	
 	public String getModelo() {
 		return modelo;
 	}
