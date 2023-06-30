@@ -2,13 +2,15 @@ package challenge;
 
 import java.text.DecimalFormat;
 
+//Foi adicionado um contexto de pedágio para testar o polimorfismo entre as classes filhas de Veiculo
 public class Application {
 
 	public static void main(String[] args) {
 		
-		//Valor do pedágio para veículos convencionais
+		//Valor do pedágio para automóveis convencionais
 		double valorPedagio = 4.70;
 		DecimalFormat df = new DecimalFormat("0.00");
+		System.out.println("Pedágio - Tarifa Convencional: R$ "+df.format(valorPedagio)+'\n');
 		
 		//Instanciando objetos com os construtores completos
 		Combustivel combMoto = new Combustivel();
@@ -44,18 +46,18 @@ public class Application {
 		//Também há a possibilidade de inserir os dados do veículo manualmente através dos setters
 		Combustivel combCarro2 = new Combustivel();
 		combCarro2.setAlcool(true);
-		Carro carro2 = new Carro();
-		carro2.setModelo("Fiat Uno");
-		carro2.setQtdPassageiros(4);
-		carro2.setQtdPortas(4);
-		carro2.setCarga(true);
-		carro2.setAutomatico(false);
-		carro2.setArCondicionado(true);
-		carro2.setRadio(true);
-		carro2.setAirbags(true);
-		carro2.setCombustivel(combCarro2);
-		System.out.println(carro2.toString());
-		System.out.println("Valor do Pedágio: R$ "+df.format(carro2.pedagio(valorPedagio))+"\n");
+		Carro carroCarga = new Carro();
+		carroCarga.setModelo("Fiat Uno");
+		carroCarga.setQtdPassageiros(4);
+		carroCarga.setQtdPortas(4);
+		carroCarga.setCarga(true);
+		carroCarga.setAutomatico(false);
+		carroCarga.setArCondicionado(true);
+		carroCarga.setRadio(true);
+		carroCarga.setAirbags(true);
+		carroCarga.setCombustivel(combCarro2);
+		System.out.println(carroCarga.toString());
+		System.out.println("Valor do Pedágio: R$ "+df.format(carroCarga.pedagio(valorPedagio))+"\n");
 	}
 
 }

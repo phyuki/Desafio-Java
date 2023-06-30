@@ -18,7 +18,7 @@ public class Caminhao extends Veiculo{
 	//Caminhões possuem uma regra específica para a tarifa do pedágio de acordo com o seu tamanho
 	@Override
 	public double pedagio(double tarifaBase) {
-		return this.qtdEixos < 7 ? 8*tarifaBase : 4.5*tarifaBase;
+		return this.qtdEixos > 7 ? 8*tarifaBase : 5*tarifaBase;
 	}
 	
 	public int getQtdEixos() {
