@@ -12,6 +12,12 @@ public class Veiculo {
 	private int cargaMaxima;
 	private Combustivel combustivel;
 	
+	//Construtor vazio para permitir flexibilidade para o desenvolvimento
+	public Veiculo() {
+		
+	}
+	
+	//Construtor contendo todos os argumentos por padrão
 	public Veiculo(String modelo, boolean motor, boolean volante, int qtdPassageiros, int qtdPortas, int qtdRodas, boolean carga,
 			int cargaMaxima, Combustivel combustivel) {
 		this.modelo = modelo;
@@ -25,6 +31,7 @@ public class Veiculo {
 		this.combustivel = combustivel;
 	}
 	
+	//Como cada veículo possui seus componentes, a verificação deles pode ser declarada apenas na superclasse
 	public String temComponente(boolean comp) {
 		return comp ? "Sim" : "Não";
 	}

@@ -5,6 +5,11 @@ public class Bicicleta extends Veiculo{
 	private boolean motorEletrico;
 	private boolean bagageiro;
 
+	//Construtor padrão considerando características básicas de uma bicicleta
+	public Bicicleta() {
+		super("", false, false, 0, 0, 2, false, 0, null);
+	}
+	
 	public Bicicleta(String modelo, Combustivel combustivel, boolean motorEletrico, boolean bagageiro) {
 		//Modelo | Motor | Volante | Passageiros | Portas | Rodas | Carga | Carga Máxima | Combustível
 		super(modelo, motorEletrico, false, 0, 0, 2, false, 0, combustivel);
@@ -29,7 +34,8 @@ public class Bicicleta extends Veiculo{
 	public String toString() {
 		String eletrico = this.temComponente(this.motorEletrico);
 		String temBagageiro = this.temComponente(this.bagageiro);
-		return this.getModelo()+"\nMotor Elétrico: "+eletrico
+		return this.getModelo()
+				+"\nMotor Elétrico: "+eletrico
 				+"\nBagageiro: "+temBagageiro
 				+this.getCombustivel().toString();
 	}

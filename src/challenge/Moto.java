@@ -4,6 +4,11 @@ public class Moto extends Veiculo{
 
 	private boolean partidaEletrica;
 	
+	//Construtor padrão considerando características básicas de uma moto
+	public Moto() {
+		super("", true, false, 1, 0, 2, false, 0, null);
+	}
+	
 	public Moto(String modelo, Combustivel combustivel, boolean partidaEletrica) {
 		//Modelo | Motor | Volante | Passageiros | Portas | Rodas | Carga | Carga Máxima | Combustível
 		super(modelo, true, false, 1, 0, 2, false, 0, combustivel);
@@ -20,9 +25,11 @@ public class Moto extends Veiculo{
 	@Override
 	public String toString() {
 		String partida = this.temComponente(this.partidaEletrica);
-		String texto = this.getModelo()+"\nPartida Elétrica: "+partida
+		String texto = this.getModelo()
 				+"\nQuantidade de Passageiros: "+this.getQtdPassageiros()
-				+"\nQuantidade de Rodas: "+this.getQtdRodas()+this.getCombustivel().toString();
+				+"\nQuantidade de Rodas: "+this.getQtdRodas()
+				+"\nPartida Elétrica: "+partida
+				+this.getCombustivel().toString();
 		return texto;
 	}
 }

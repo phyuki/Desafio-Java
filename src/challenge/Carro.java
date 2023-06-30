@@ -7,6 +7,11 @@ public class Carro extends Veiculo{
 	private boolean radio;
 	private boolean airbags;
 	
+	//Construtor padrão considerando características básicas de um carro
+	public Carro() {
+		super("", true, true, 0, 0, 4, false, 0, null);
+	}
+	
 	public Carro(String modelo, int qtdPassageiros, int qtdPortas, Combustivel combustivel, 
 			boolean automatico, boolean arCondicionado, boolean radio, boolean airbags) {
 		//Modelo | Motor | Volante | Passageiros | Portas | Rodas | Carga | Carga Máxima | Combustível
@@ -16,7 +21,6 @@ public class Carro extends Veiculo{
 		this.radio = radio;
 		this.airbags = airbags;
 	}
-	
 	
 	public boolean isAutomatico() {
 		return automatico;
@@ -49,12 +53,13 @@ public class Carro extends Veiculo{
 		String temAC = this.temComponente(this.arCondicionado);
 		String temRadio = this.temComponente(this.radio);
 		String temAirbags = this.temComponente(this.airbags);
-		return this.getModelo() +"\nQuantidade de Passageiros: "+this.getQtdPassageiros()
+		return this.getModelo() 
+				+"\nQuantidade de Passageiros: "+this.getQtdPassageiros()
 				+"\nQuantidade de Portas: "+this.getQtdPortas()
 				+"\nCâmbio Automático: "+temCambioAutomatico
 				+"\nAr Condicionado: "+temAC
 				+"\nRadio: "+temRadio
-				+"\ntemAirbags: "+temAirbags
+				+"\nAirbags: "+temAirbags
 				+this.getCombustivel().toString();
 	}
 }
